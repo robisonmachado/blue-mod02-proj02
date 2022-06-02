@@ -197,3 +197,24 @@ footer p a{
     color: #fff;
     font-weight: 600;
 }
+
+.btn-padrao, .btn-padrao:link, .btn-padrao:visited {
+  padding: 0.6rem;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px red;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.btn-padrao:hover, .btn-padrao:active {
+  background-color: red;
+  color: #fff;
+}

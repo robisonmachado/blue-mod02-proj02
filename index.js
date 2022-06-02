@@ -62,8 +62,15 @@ app.post("/create", (req, res) => {
 });
 
 app.get("/detalhes/:id", (req, res) => {
+    console.log("pokedex >>> ", pokedex);
     const id = +req.params.id;
-    const pokemon = pokedex.find((p) => p.id === id);
+    console.log("procurando id >>> ", id);
+
+    const pokemon = pokedex.find((p) => p && p.id === id);
+    if(!pokemon) {
+        console.log("não achou o pokemon >>> ", pokemon);
+        return
+    }
     res.render("detalhes", {pokemon});
 });
 
@@ -79,7 +86,7 @@ app.get("/delete/:id", (req, res) => {
     const id = +req.params.id - 1;
     delete pokedex[id];
 
-    res.redirect("/");
+    res.redirect("/#cards");
 });
 
 app.listen(port, () => console.log(`servidor rodando em http://localhost:${port}`))

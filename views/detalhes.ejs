@@ -18,17 +18,13 @@
           </a>
         </li>
         <li><a href="/#cards">listar</a></li>
-        <li><a href="/novo">cadastrar</a></li>
+        <li><a href="/novo#cadastro">cadastrar</a></li>
       </ul>
     </nav>
 
-    <header>
-      <img src="/img/banner.png" alt="banner" />
-    </header>
-
     <main>
       <section id="cadastro">
-        <img src="/img/pokedex.png" alt="Pokedex" />
+        <img src="<%= pokemon.imagem %> " alt="<%= pokemon.nome %> " />
 
         <div>
           <h2>Atualização do Pokemon</h2>
@@ -67,6 +63,7 @@
             />
 
             <button id="btnAtualizar" type="submit">Atualizar</button>
+            <a class="btn-padrao" href="/delete/<%= pokemon.id %>">apagar</a>
           </form>
         </div>
       </section>

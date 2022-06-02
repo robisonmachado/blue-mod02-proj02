@@ -18,7 +18,7 @@
           </a>
         </li>
         <li><a href="/#cards">listar</a></li>
-        <li><a href="/novo">cadastrar</a></li>
+        <li><a href="/novo#cadastro">cadastrar</a></li>
       </ul>
     </nav>
 
@@ -37,7 +37,6 @@
           <p class="descricao"><%= pokemon.descricao %></p>
           <p>Tipo: <%= pokemon.tipo %></p>
           <a id="editar" href="/detalhes/<%= pokemon.id %>">detalhes</a>
-          <a id="apagar" href="/delete/<%= pokemon.id %>">apagar</a>
         </div>
         <% }) %>
       </section>
