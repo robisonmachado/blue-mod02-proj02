@@ -64,14 +64,17 @@ app.post("/create", (req, res) => {
 app.get("/detalhes/:id", (req, res) => {
     console.log("pokedex >>> ", pokedex);
     const id = +req.params.id;
-    console.log("procurando id >>> ", id);
 
     const pokemon = pokedex.find((p) => p && p.id === id);
-    if(!pokemon) {
-        console.log("não achou o pokemon >>> ", pokemon);
-        return
-    }
     res.render("detalhes", {pokemon});
+});
+
+app.get("/editar/:id", (req, res) => {
+    console.log("pokedex >>> ", pokedex);
+    const id = +req.params.id;
+
+    const pokemon = pokedex.find((p) => p && p.id === id);
+    res.render("editar", {pokemon});
 });
 
 app.post("/update/:id", (req, res) => {
