@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Blue Módulo 02 Projeto 02 | Pokedex</title>
   </head>
 
@@ -17,7 +17,7 @@
             <h1>Pokédex</h1>
           </a>
         </li>
-        <li><a href="#cards">listar</a></li>
+        <li><a href="/#cards">listar</a></li>
         <li><a href="/novo">cadastrar</a></li>
       </ul>
     </nav>
@@ -31,22 +31,42 @@
         <img src="/img/pokedex.png" alt="Pokedex" />
 
         <div>
-          <h2>Cadastre um novo Pokemon!</h2>
+          <h2>Atualização do Pokemon</h2>
 
-          <form action="/create" method="POST">
+          <form action="/update/<%= pokemon.id %>" method="POST">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              value="<%= pokemon.nome %>"
+            />
 
             <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" name="descricao" />
+            <input
+              type="text"
+              id="descricao"
+              name="descricao"
+              value="<%= pokemon.descricao %>"
+            />
 
             <label for="tipo">Tipo:</label>
-            <input type="text" id="tipo" name="tipo" />
+            <input
+              type="text"
+              id="tipo"
+              name="tipo"
+              value="<%= pokemon.tipo %>"
+            />
 
             <label for="imagem">Link da Imagem</label>
-            <input type="text" id="imagem" name="imagem" />
+            <input
+              type="text"
+              id="imagem"
+              name="imagem"
+              value="<%= pokemon.imagem %>"
+            />
 
-            <button id="btnCadastrar" type="submit">Cadastrar</button>
+            <button id="btnAtualizar" type="submit">Atualizar</button>
           </form>
         </div>
       </section>
