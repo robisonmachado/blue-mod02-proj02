@@ -218,3 +218,52 @@ footer p a{
   background-color: red;
   color: #fff;
 }
+
+.container-mensagem{
+  position: fixed;
+  top: 2rem;
+  z-index: 99999;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container-mensagem .mensagem{
+  border: 0.3rem solid black;
+  background-color: rgba(241, 228, 45, 0.9);
+  border-radius: 0.5rem;
+  min-width: 80%;
+  min-height: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+
+}
+
+.container-mensagem .fechar-mensagem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  width: 2rem;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.container-mensagem .fechar-mensagem:hover{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}

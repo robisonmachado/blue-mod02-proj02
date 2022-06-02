@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    
+    <% if (message) { %>
+        <div class="container-mensagem">
+            <div class="mensagem">
+                <%= message %> Aperte F5 para fechar essa mensagem!
+            </div>
+        </div>
+    <% } %>
+
     <nav>
       <ul>
         <li><img src="/img/pokebola.png" alt="Pokebola" /></li>
