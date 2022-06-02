@@ -82,7 +82,7 @@ app.post("/update/:id", (req, res) => {
     const newPokemon = req.body;
     newPokemon.id = id + 1;
     pokedex[id] = newPokemon;
-    res.redirect(`/detalhes/${id}`);
+    res.redirect(`/detalhes/${newPokemon.id}`);
 });
 
 app.get("/delete/:id", (req, res) => {
